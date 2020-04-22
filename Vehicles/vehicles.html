@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Автомобілі</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<!--         Jquery          --->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!--         Slider function          --->
+	<link rel="stylesheet" href="Slider/dist/jquery.bxslider.css">
+  	<script src="Slider/dist/jquery.bxslider.min.js"></script>
+
+	<!--Alert function-->
+	<script src="../Alert_function/modal.js" async></script>
+	<link href="../Alert_function/build/css/modal.css" rel="stylesheet">
+	
+	<!-- External js files-->
+	<script type="text/javascript" src="vehicles.js" async></script>
+	<script type="text/javascript"src="../Main/footer.js"></script>
+	<!-- External CSS files-->
+	<link rel="stylesheet" type="text/css" href="vehicles.css">
+	<!-- Navbar icon-->
+	<link rel = "icon" href ="Brand.png" type = "image/x-icon">
+	<!-- Custom icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script type="text/javascript">
+        function AlertMessage(a)
+        {
+            Modal.alert({title:"Вибачте..." ,message:"ця сторінка в процесі розробки. Дякую за розуміння"});
+        }
+    </script>
+
+
+</head>
+<body onscroll="scrollFunction()">
+	<header>
+		<nav>
+	    <div class="Logo">
+			<a href="../Main/index.html"><img src="Brand.png" alt="Auto service"></a>
+			<label for="toggle" onclick="myFunction(this)">
+  				<div class="bar1"></div>
+  				<div class="bar2"></div>
+  				<div class="bar3"></div>
+			</label>
+	    	<input type="checkbox" id="toggle"/>
+	    </div>
+	    <ul>
+			<li class="dropbtn">Авто<i class="fas fa-caret-down"></i>
+			<ul class="dropdown">
+				<a href="vehicles.html"><li>Седан</li></a>
+				<a href="vehicles.html"><li>Хетчбек</li></a>
+				<a href="vehicles.html"><li>Універсал</li></a>
+				<a href="vehicles.html"><li>Позашляховик</li></a>
+			</ul>
+			</li>
+			<a href="" onclick="Error()"><li>Ремонт</li></a>
+			<a href="../About_us/about_us.html"><li>Про нас</li></a>
+			<a href="#footer"><li>Контакти</li></a>
+		</ul>
+		</nav>
+    </header>
+        	<button id="myBtn" title="Перейти вгору сторінки" onclick="topFunction()"><i class="fas fa-arrow-up"></i></button>
+
+    <main>
+    	<div class="item">
+    		<div class="slider">
+    		<img  alt="Mazda 3 2019" 
+            src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/28f/28f36252fda47c92af76f99c948b1b11.JPG?158564773647253" alt="Mazda 3 2019">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/923/923879fb3d3bc6034889703c4d35880c.JPG?158564773756676" alt="Mazda 3 2019">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/371/371d7cba5f025e169d5270b0dd6c110d.JPG?158564773741115" alt="Mazda 3 2019">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/61b/61b34f6117702f1b2be20e05a627ee25.JPG?158564773747970" alt="Mazda 3 2019">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/d39/d392ec6e895e783fc08a1426f4889056.JPG?158564773768790">
+    	 	</div>
+
+    		<p class="title_car">Mazda 3 2019</p>
+    		<p class="price_car">12 500 $</p>
+    		<button class="more_info" onclick="openWindow(this)">Характеристики</button>
+            <div id="information_block" class="window">
+                <span onclick="closeWindow(this)" id="close"> <i class="far fa-window-close"></i></span>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Марка</th>
+                            <th ><img class="brand_icon" src="https://www.cars-data.com/design/images/cars-logo/mazda-logo-small.jpg"></th>
+                        </tr>
+                        <tr>
+                            <th>Модель авто</th>
+                            <th colspan="2">Mazda 3 Preferred</th>
+                        </tr>
+                         <tr>
+                            <th>Рік випуску</th>
+                            <th colspan="2">2019</th>
+                        </tr>
+                        <tr>
+                            <th>Пробіг (км) </th>
+                            <th colspan="2">700</th>
+                        </tr>
+                        <tr>
+                            <th>Тип кузова</th>
+                            <th colspan="2">Седан</th>
+                        </tr>
+                        <tr>
+                            <th>Тип топлива</th>
+                            <th colspan="2">Бензин</th>
+                        </tr>                      
+                    </table>
+                   <div class="extra_info">
+                        2019 MAZDA 3 PREFERRED, ціна вказана з урахуванням доставки, аукціонного збору і розмитнення автомобіля. Автомобіль на ходу і чекає свого власника!
+                        <br>Щоб забронювати автомобіль, <span><a href="#footer">з'єднайтесь</a></span> з нами зручним для вас способом
+                    </div>
+            </div>
+    	</div>
+
+    	<div class="item">
+    		<div class="slider">
+    		<img alt="Kia Optima 2017" 
+            src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/b91/b91d19d3ac6d10541f24a4279732a7f0.JPG?158564762344380" alt="Kia Optima 2017">
+    		<img  src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/a3b/a3ba9130fa35cd2db98c14d752559dac.JPG?158564762340410" alt="Kia Optima 2017">
+    		<img  src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/bac/bac8e3f88d33a5af3a5ac37b140d32fe.JPG?158564762352705" alt="Kia Optima 2017">
+    		<img  src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/295/295a0f95109c4ce02902f96f04aae382.JPG?158564762344564" alt="Kia Optima 2017">
+    		<img  src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/db7/db706ed3dedf2ae1ed0f0ca56ff4746d.JPG?158564762343043">
+    		</div>
+    		<p class="title_car">Kia Optima 2017</p>
+    		<p class="price_car">9 000 $</p>
+            <button class="more_info" onclick="openWindow(this)">Характеристики</button>
+            <div id="information_block" class="window">
+                <span onclick="closeWindow(this)" id="close"> <i class="far fa-window-close"></i></span>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Марка</th>
+                            <th><img class="brand_icon" src="https://www.cars-data.com/design/images/cars-logo/kia-logo-small.jpg"></th>
+                        </tr>
+                        <tr>
+                            <th>Модель авто</th>
+                            <th colspan="2">Optima</th>
+                        </tr>
+                         <tr>
+                            <th>Рік випуску</th>
+                            <th colspan="2">2017</th>
+                        </tr>
+                        <tr>
+                            <th>Пробіг (км) </th>
+                            <th colspan="2">80 200</th>
+                        </tr>
+                        <tr>
+                            <th>Тип кузова</th>
+                            <th colspan="2">Седан</th>
+                        </tr>
+                        <tr>
+                            <th>Тип топлива</th>
+                            <th colspan="2">Бензин</th>
+                        </tr>                      
+                    </table>
+                   <div class="extra_info">
+                        Kia Optima 2017, ціна вказана з урахуванням доставки, аукціонного збору і розмитнення автомобіля. Автомобіль на ходу і чекає свого власника!
+                        <br>Щоб забронювати автомобіль, <span><a href="#footer">з'єднайтесь</a></span> з нами зручним для вас способом
+                    </div>
+            </div>
+    	</div>
+    	<div class="item">
+    		<div class="slider">
+      		<img alt="Hyinday Sonata Hybrid 2018" src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/7b8/7b83549bc1c3621a4497a26283607450.JPG?158564750170040" alt="Hyinday Sonata Hybrid 2018">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/d38/d38c53b570519bd8a97cb346dafcc2e6.JPG?158564750154500"
+    		alt="Hyinday Sonata Hybrid 2018">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/4e2/4e24999775393a7622bcc1dfb0fd5c7f.JPG?158564750159513" alt="Hyinday Sonata Hybrid 2018">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/8c5/8c5522737a8f2e19472bcb9f059c3f1d.JPG?158564750140168" alt="Hyinday Sonata Hybrid 2018">
+     		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/f77/f77d3f86ec41a470fd3566fc4e2aa9db.JPG?158564750133118">
+    		</div>
+    		<p class="title_car">Hyinday Sonata 2018</p>
+    		<p class="price_car">16 000 $</p>
+    		<button class="more_info" onclick="openWindow(this)">Характеристики</button>
+            <div id="information_block" class="window">
+                <span onclick="closeWindow(this)" id="close"> <i class="far fa-window-close"></i></span>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Марка</th>
+                            <th><img class="brand_icon" src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/439/250_46_1/43957450b214909433e8bb8e714d0736.png?15439641833265"></th>
+                        </tr>
+                        <tr>
+                            <th>Модель авто</th>
+                            <th colspan="2">Sonata</th>
+                        </tr>
+                         <tr>
+                            <th>Рік випуску</th>
+                            <th colspan="2">2018</th>
+                        </tr>
+                        <tr>
+                            <th>Пробіг (км) </th>
+                            <th colspan="2">19 700</th>
+                        </tr>
+                        <tr>
+                            <th>Тип кузова</th>
+                            <th colspan="2">Седан</th>
+                        </tr>
+                        <tr>
+                            <th>Тип топлива</th>
+                            <th colspan="2">Гібрид</th>
+                        </tr>                      
+                    </table>
+                   <div class="extra_info">
+                        Hyinday Sonata 2018, ціна вказана з урахуванням доставки, аукціонного збору і розмитнення автомобіля. Автомобіль на ходу і чекає свого власника!
+                        <br>Щоб забронювати автомобіль, <span><a href="#footer">з'єднайтесь</a></span> з нами зручним для вас способом
+                    </div>
+            </div>
+    	</div>
+     	<div class="item">
+    		<div class="slider">
+    		<img alt="Wolkswagen Jetta S 2019" 
+            src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/7b9/7b9582f91428ce140e0fbdf8755135b6.JPG?158564695458111">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/78c/78c7b60fe679c9a461a6144b0cc94e2e.JPG?158564695464568">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/fe5/fe53f965e854fc5bb61e2b8b56e96b22.JPG?158564695441277">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/df4/df401f682ab23d025bf5bc220de53724.JPG?158564695444975">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/8c5/8c521159ae95353b010e88e58c565845.JPG?158564695449250">
+            </div>
+    		<p class="title_car">Wolkswagen Jetta S 2019</p>
+    		<p class="price_car">12 000 $</p>
+    		<button class="more_info" onclick="openWindow(this)">Характеристики</button>
+            <div id="information_block" class="window">
+                <span onclick="closeWindow(this)" id="close"> <i class="far fa-window-close"></i></span>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Марка</th>
+                            <th><img class="brand_icon" src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/32e/250_46_1/32e537c1b5be40f392dd7ac069985645.png?15436775264228"></th>
+                        </tr>
+                        <tr>
+                            <th>Модель авто</th>
+                            <th colspan="2">Jetta S</th>
+                        </tr>
+                         <tr>
+                            <th>Рік випуску</th>
+                            <th colspan="2">2019</th>
+                        </tr>
+                        <tr>
+                            <th>Пробіг (км) </th>
+                            <th colspan="2">33 100</th>
+                        </tr>
+                        <tr>
+                            <th>Тип кузова</th>
+                            <th colspan="2">Седан</th>
+                        </tr>
+                        <tr>
+                            <th>Тип топлива</th>
+                            <th colspan="2">Бензин</th>
+                        </tr>                      
+                    </table>
+                   <div class="extra_info">
+                        Wolkswagen Jetta S 2019, ціна вказана з урахуванням доставки, аукціонного збору і розмитнення автомобіля. Автомобіль на ходу і чекає свого власника!
+                        <br>Щоб забронювати автомобіль, <span><a href="#footer">з'єднайтесь</a></span> з нами зручним для вас способом
+                    </div>
+            </div>
+    	</div>
+
+
+    	<div class="item">
+    		<div class="slider">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/9c9/9c9045e7d9c77ec28898ec83270a917d.JPG?158564836352691" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/fcd/fcdd2091535183087628496385482520.JPG?158564836351220" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/381/381a60672b94e2db0680a9d47d5a6a67.JPG?158564836349099" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/363/363d29f56a2a6fb8b391469080b4f646.JPG?158564836354689" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/15b/15bbbfa761460bc548ee74259a91e842.JPG?158564836352658" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/244/2443b8dfa80543406f1d4ca8f407451a.JPG?158564836342857" alt="Audi Q7 Premium Plus 2010">
+    		</div>
+    		<p class="title_car">Audi Q7 2010</p>
+    		<p class="price_car">8 000 $</p>
+    		<button class="more_info" onclick="openWindow(this)">Характеристики</button>
+            <div id="information_block" class="window">
+                <span onclick="closeWindow(this)" id="close"> <i class="far fa-window-close"></i></span>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Марка</th>
+                            <th><img class="brand_icon" src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/8d9/250_46_1/8d9a3ae0600f3da647adb6fce300657e.jpg?15436798354286"></th>
+                        </tr>
+                        <tr>
+                            <th>Модель авто</th>
+                            <th colspan="2">Q7</th>
+                        </tr>
+                         <tr>
+                            <th>Рік випуску</th>
+                            <th colspan="2">2010</th>
+                        </tr>
+                        <tr>
+                            <th>Пробіг (км) </th>
+                            <th colspan="2">120 900</th>
+                        </tr>
+                        <tr>
+                            <th>Тип кузова</th>
+                            <th colspan="2">Позашляховик</th>
+                        </tr>
+                        <tr>
+                            <th>Тип топлива</th>
+                            <th colspan="2">дизель</th>
+                        </tr>                      
+                    </table>
+                   <div class="extra_info">
+                        Audi Q7 2010, ціна вказана з урахуванням доставки, аукціонного збору і розмитнення автомобіля. Автомобіль на ходу і чекає свого власника!
+                        <br>Щоб забронювати автомобіль, <span><a href="#footer">з'єднайтесь</a></span> з нами зручним для вас способом
+                    </div>
+            </div>
+    	</div>
+
+
+
+    	<div class="item">
+    		<div class="slider">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/9c9/9c9045e7d9c77ec28898ec83270a917d.JPG?158564836352691" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/fcd/fcdd2091535183087628496385482520.JPG?158564836351220" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/381/381a60672b94e2db0680a9d47d5a6a67.JPG?158564836349099" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/363/363d29f56a2a6fb8b391469080b4f646.JPG?158564836354689" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/15b/15bbbfa761460bc548ee74259a91e842.JPG?158564836352658" alt="Audi Q7 Premium Plus 2010">
+    		<img src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/iblock/244/2443b8dfa80543406f1d4ca8f407451a.JPG?158564836342857" alt="Audi Q7 Premium Plus 2010">
+    		</div>
+    		<p class="title_car">Audi Q7 2010</p>
+    		<p class="price_car">8 000 $</p>
+    		<button class="more_info" onclick="openWindow(this)">Характеристики</button>
+                        <div id="information_block" class="window">
+                <span onclick="closeWindow(this)" id="close"><i class="far fa-window-close"></i></span>
+                    <table style="width: 100%;">
+                        <tr>
+                            <th>Марка</th>
+                            <th><img class="brand_icon" src="https://opt-1288420.ssl.1c-bitrix-cdn.ru/upload/resize_cache/iblock/8d9/250_46_1/8d9a3ae0600f3da647adb6fce300657e.jpg?15436798354286"></th>
+                        </tr>
+                        <tr>
+                            <th>Модель авто</th>
+                            <th colspan="2">Q7</th>
+                        </tr>
+                         <tr>
+                            <th>Рік випуску</th>
+                            <th colspan="2">2010</th>
+                        </tr>
+                        <tr>
+                            <th>Пробіг (км) </th>
+                            <th colspan="2">120 900</th>
+                        </tr>
+                        <tr>
+                            <th>Тип кузова</th>
+                            <th colspan="2">Позашляховик</th>
+                        </tr>
+                        <tr>
+                            <th>Тип топлива</th>
+                            <th colspan="2">дизель</th>
+                        </tr>                      
+                    </table>
+                   <div class="extra_info">
+                        Audi Q7 2010, ціна вказана з урахуванням доставки, аукціонного збору і розмитнення автомобіля. Автомобіль на ходу і чекає свого власника!
+                        <br>Щоб забронювати автомобіль, <span><a href="#footer">з'єднайтесь</a></span> з нами зручним для вас способом
+                    </div>
+            </div>
+    	</div>
+
+
+    </main>
+
+	<footer>
+		<div class="data" id="footer">
+		<div class="phone_numbers">
+			
+			<p id="footer_header">Наші номери телефонів</p><br>
+			
+			<div class="elements">
+				<i class="fas fa-phone"></i> (098) 075 56 77<br>
+				<i class="fas fa-phone"></i> (093) 551 52 35<br>
+				<i class="fas fa-phone"></i> (099) 781 22 00<br>
+				<p>Ми вам зателефонуємо</p>
+				<form action="" method="post" onclick="Validate_name(this)">
+				<input type="text" name="customer_name" class="customer_name" placeholder="Ім'я">
+				<input type="tel" class="phone" name="phone" 
+       				pattern="[+380]+[0-9]{9}" required value="+380">
+                <button class="submit_btn"><i class="fas fa-check"></i>
+
+       			</form>
+       		</div>
+       	</div>
+
+
+			<div class="location">
+
+			<p id="footer_header">Ми знаходимось за адресою</p>
+
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.7029651272355!2d23.508115671804166!3d49.26962970260921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473a49ad2e80b745%3A0xf745ac3f7e6272d4!2z0KLRgNGD0YHQutCw0LLQtdGGLCDQm9GM0LLQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDgyMjAw!5e0!3m2!1sru!2sua!4v1583348151494!5m2!1sru!2sua" frameborder="0"></iframe>
+			</div>
+	
+			</div>
+
+			<div class="networks">
+
+				<p id="footer_header">Наші соціальні мережі</p>
+
+				<div class="networks_element">
+					<i class="fab fa-instagram"><a href=""></a></i>
+					<i class="fab fa-telegram-plane"><a href=""></a></i>
+					<i class="fab fa-facebook-f"><a href=""></a></i>
+					<i class="fab fa-viber"><a href=""></a></i>
+				</div>
+					<label for="email" id="text_for_email">Є питання? Ми відповімо на пошту :)
+					</label>
+				<form action="" method="post" onsubmit="Validate_email(this)">
+					<div class="input_content">
+						<input type="email" name="email" id="email" placeholder="Введіть вашу пошту">
+						<textarea name="rewiev"
+						 placeholder="Задайте нам питання..."></textarea>
+
+					</div>
+						 <input type="submit" id="submit" value="Відправити">
+				</form>
+			
+
+			</div>
+		</div>
+    			<hr><p class="copyright">&copy 2020. Всі права захищені.</p>
+
+	
+	</footer>
+
+    </body>
+</html>

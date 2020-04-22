@@ -1,0 +1,1259 @@
+*
+{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+   
+    background-color: #FCFCFC;
+    font-family: Verdana, Geneva, sans-serif;
+     }
+img
+{
+    height: 70px;
+    margin: 20px;
+    margin-left: 50px;
+    transform: scale(1);
+}
+img:hover
+{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+/* адаптація під смартфони і планшети з невеликим екраном*/
+@media only screen and (min-width: 320px)
+{
+    #toggle
+    {
+        display: none;
+    }
+    label
+    {
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        position: absolute; 
+        right: 20px;
+        margin-top: 25px;
+    }
+    .bar1, .bar2, .bar3 
+    {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .change .bar1 
+    {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .change .bar2 {opacity: 0;}
+    .change .bar3 
+    {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+    nav
+    {
+        background-color: black;
+        width: 100%;
+    }
+    a
+    {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    ul 
+    {
+        text-align: center;
+    }
+    ul li
+    {
+        color: white;
+        border-bottom: solid 1px #C0C0C0;
+        font-size: 25px;
+        display: none;
+    }
+    ul li:hover
+    {
+        color: #EE1111;
+    }
+    .dropbtn:hover
+    {
+        color: white;
+    }
+    .dropdown
+    {
+        display: none;
+        border-style: inset;
+        border-color: white;
+        margin: auto;
+        background-color: #080808;
+        width: 200px;
+    }
+    .dropdown li
+    {
+        list-style-type: none;
+        font-size: 25px;
+        border-bottom: none;
+    }
+    main 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    #information_block
+    {
+        position: absolute;
+        display: none;
+        color: white;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(238,17,17,1) 100%);
+        height: 505px;
+        width: 320px;
+    }
+    table
+    {
+        text-align: left;
+        margin-left: 5px;
+    }
+    table th
+    {
+        border-bottom: 1px solid #C0C0C0;
+        line-height: 40px;
+    }
+    table th .brand_icon
+    {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding:0;
+        height: 35px;
+        width: 35px;
+        transition: all 0s;
+    }
+    .extra_info
+    {
+        margin: 30px 20px;
+    }
+    .extra_info span a
+    {
+        color: black;
+        font-weight: bold;
+        border-bottom: 1px solid;
+    }
+    #close
+    {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 30px;
+    }
+     #close:hover
+     {
+        top: 0px;
+        font-size: 35px;
+        color: rgba(238,17,17,1) 
+     }
+    .item 
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        height: auto;
+        width: 320px;
+        background-color:#F5F5F5;
+        box-shadow: -7px 7px 19px -9px rgba(0,0,0,0.75);
+        border:5px solid;
+        border-color: white;
+    }
+    .item img 
+    {
+        height: 250px;
+        width: 320px;
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        position: absolute;   
+    }
+   .title_car
+    {
+        height: 50px;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .price_car
+    {
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: 800;
+        text-align: center;
+    }
+    .more_info
+    {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: 600;
+        background-color:#F5F5F5;
+        height: 70px;
+        width: 100%;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    .more_info:hover
+    {
+        background-color: black;
+        color: white;
+    }
+    #myBtn
+    {
+        display:block;
+        position: fixed;
+        visibility: hidden;
+        right: 10px;
+        bottom: 40px;
+        height: 40px;
+        width: 40px;
+        color: black;
+        font-size: 20px;
+        border-style: inset;
+        background-color::#F5F5F5;
+        opacity: 0.9;
+        z-index: 0; 
+    }
+    #myBtn:hover
+    {
+        font-size: 30px;
+        opacity: 1;
+    }
+    footer
+    {
+        position: relative;
+        margin: 0 auto;
+        bottom: 0; 
+        height: auto;
+        width: 100%;
+        background-color: black;
+    }
+    .data
+    {
+        display: inline-block;
+        color: white;
+        font-size:25px;
+        padding: 20px;
+        width: 100%;
+        text-align: center;  
+    }
+    .elements
+    { 
+        line-height: 40px;
+        margin-bottom: 60px;
+    }
+    .elements i
+    {
+        color: #EE1111;
+    }
+    .customer_name,.phone
+    {
+        display: block;
+        margin-bottom: 20px;
+        height: 35px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 30px;
+        color: #EE1111;
+        font-weight: 600;
+    }
+    .customer_name::placeholder, .phone::placeholder
+    {
+        color:#EE1111;
+        font-weight: 600;  
+    }
+    .submit_btn
+    {
+        position: absolute;
+        font-size: 30px;
+        background-color: black;
+        border: none;
+    }
+    .submit_btn:hover
+    {
+        font-size: 40px;
+    }
+
+    .customer_name::placeholder,.phone::placeholder
+    {
+        color: #EE1111;
+    }
+    .location
+    {
+        text-align: center;
+    }
+    iframe
+    {
+        margin-top: 40px;
+        height: 280px;
+        width:  280px;
+        border-radius: 5px;
+    }
+    .networks
+    {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .networks_element
+    {
+        display: flex;
+        width: 150px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+    .networks_element i:hover
+    {
+        color: #EE1111;
+        opacity: 0.8;
+    }
+    form
+    {
+        position: relative;
+        margin: 0 auto;
+    }
+    #text_for_email
+    {
+        display: contents;
+        font-size: 20px;
+    }
+    .input_content
+    {
+        position: relative;
+    }
+    #email
+    {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        height: 40px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color:#EE1111;
+        background-color: black;
+    }
+    textarea
+    {
+        margin-bottom: 200px;
+        resize: none;
+        height: 70px;
+        width: 250px;
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color:#EE1111;
+        background-color: black;
+    }
+    #email::placeholder, textarea::placeholder
+    {
+        color:#EE1111;
+    }
+    #submit
+    {
+        height: 50px;
+        width: 150px;
+        color: white;
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        background-color: black;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #submit:hover
+    {
+        background-color: #EE1111;
+    }
+    hr
+    {
+        margin: 0 auto;
+        width: 80%;
+    }
+     .copyright
+     {
+        text-align: center;
+        color: white;
+        font-size:15px;
+        padding: 10px;
+     }
+}
+/* адаптація під планшети*/
+@media only screen and (min-width: 961px)
+{
+    nav
+    {
+        position: fixed;
+        background-color: black;
+        z-index: 1;
+        display: flex;
+        width: 100%;
+    }
+    a
+    {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    ul 
+    {
+        display: flex;
+        margin-left: 100px;
+        margin-top: 40px;
+    }
+    ul li
+    {
+        color: white;
+        font-size: 25px;
+        margin-right: 50px;
+        display: block;
+        border-bottom:none;
+    }
+    ul li:hover
+    {
+        color: #EE1111;
+    }
+    .dropbtn
+    {
+        position: relative;
+    }
+    .dropbtn:hover
+    {
+        color: white;
+    }
+    .dropbtn:hover .dropdown
+    {
+        display: block;
+        opacity: 1;
+    }
+    .dropbtn i
+    {
+        transition: all 0.4s linear;
+    }
+    .dropbtn:hover i
+    {
+        transition: all 0.4s linear;
+        transform: rotate(180deg);
+    }
+    .dropdown
+    {
+        display: none;
+        position: absolute;
+        margin-top: 0px;
+        left: -80px;
+        width: 250px;
+        border-style: inset;
+        border-color: white;
+        background-color: #080808;
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    .dropdown li
+    {
+        margin: 0 auto;
+        list-style-type: none;
+        font-size: 25px;
+    }
+    .dropdown li:hover
+    {
+       border-bottom: solid 1px #C0C0C0;
+    }
+    label, #toggle
+    {
+        display: none;
+    }
+    main 
+    {
+        display: flex;
+        margin: 0 auto;
+        max-width: 85%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #information_block
+    {
+        position: absolute;
+        display: none;
+        color: white;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 50%, rgba(238,17,17,1) 100%);
+        height: 500px;
+        width: 350px;
+    }
+    table
+    {
+        text-align: left;
+        margin-left: 5px;
+    }
+    table th
+    {
+        border-bottom: 1px solid #C0C0C0;
+        line-height: 40px;
+    }
+    table th .brand_icon
+    {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding:0;
+        height: 35px;
+        width: 35px;
+        transition: all 0s;
+    }
+    .extra_info
+    {
+        margin: 30px 20px;
+    }
+    .extra_info span a
+    {
+        color: black;
+        font-weight: bold;
+        border-bottom: 1px solid;
+    }
+    #close
+    {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        font-size: 30px;
+    }
+     #close:hover
+     {
+        top: 0px;
+        font-size: 35px;
+        color: rgba(238,17,17,1) 
+     }
+    .item 
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px 50px 100px 50px;
+        height: 500px;
+        width: 350px;
+        background-color:#F5F5F5;
+        box-shadow: -7px 7px 19px -9px rgba(0,0,0,0.75);
+        border:5px solid;
+        border-color: white;
+        overflow: hidden;    
+    }
+    .item:hover
+    {
+        box-shadow: -17px 8px 30px -6px rgba(0,0,0,0.75);
+    }
+    .item img 
+    {
+        position: absolute;
+        height: 230px;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        margin-top:30px;
+        transition: all 1.0s;
+        transform: scale(1.0);
+    }
+    .item img:hover
+    {
+       transform: scale(1.1);
+    }
+    .title_car
+    {
+        height: 50px;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+
+    }
+    .price_car
+    {
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: 800;
+        text-align: center;
+
+    }
+    .more_info
+    {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: 600;
+        background-color:#F5F5F5;
+        height: 70px;
+        width: 100%;
+        padding: 20px;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    .more_info:hover
+    {
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 70%, rgba(238,17,17,1) 100%);
+        color: white;
+    }
+    #myBtn
+    {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        right: 30px;
+        bottom: 50px;
+        height: 50px;
+        width: 50px;
+        color: black;
+        font-size: 20px;
+        border-style: inset;
+        background-color::#F5F5F5;
+        opacity: 0.9;
+        z-index: 0; 
+    }
+    #myBtn:hover
+    {
+        font-size: 30px;
+        opacity: 1;
+    }
+   footer
+   {
+        position: relative;
+        bottom: 0; 
+        height: auto;
+        width: 100%;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .data
+    {
+        display: flex;
+        color: white;
+        font-size:20px;
+        padding: 20px;
+    }
+    .elements
+    {
+        position: relative;
+        line-height: 40px;
+    }
+    .customer_name,.phone
+    {
+        display: block;
+        margin-bottom: 15px;
+        height: 35px;
+        width: 220px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 30px;
+        color: #EE1111;
+        font-weight: 600;
+    }
+    .customer_name::placeholder, .phone::placeholder
+    {
+        color:#EE1111;
+        font-weight: 600;  
+    }
+    .submit_btn
+    {
+        position: absolute;
+        font-size: 30px;
+        background-color: black;
+        border: none;
+    }
+    .submit_btn:hover
+    {
+        font-size: 40px;
+    }
+    iframe
+    {
+        margin-top: 30px;
+        height: 280px;
+        width:  300px;
+        border-radius: 5px;
+    }
+    .networks
+    {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .networks_element
+    {
+        display: flex;
+        width: 150px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .networks_element i:hover
+    {
+        color: #EE1111;
+        opacity: 0.8;
+    }
+    #text_for_email
+    {
+        display: contents;
+        font-size: 20px;
+    }
+    .input_content
+    {
+        position: absolute;
+        margin-top: 10px;
+    }
+    #email
+    {
+        display: inline-block;
+        height: 40px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color: #EE1111;
+        background-color: black;
+    }
+    textarea
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        resize: none;
+        height: 70px;
+        width: 250px;
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color: #EE1111;
+        background-color: black;
+    }
+    #email::placeholder, textarea::placeholder
+    {
+        color:#EE1111;
+    }
+    #submit
+    {
+        margin-top:200px; 
+        height: 50px;
+        width: 140px;
+        color: white;
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        background-color: black;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #submit:hover
+    {
+        background-color: #EE1111;
+    }
+    hr
+    {
+        margin: 0 auto;
+        width: 80%;
+    }
+     .copyright
+     {
+        text-align: center;
+        color: white;
+        font-size:15px;
+        padding: 10px;
+     }
+}
+
+/* адаптація під ноутбуки*/
+@media only screen and (min-width: 1325px)
+{
+    nav
+    {
+        position: fixed;
+        background-color: black;
+        display: flex;
+        width: 100%;
+        z-index: 1;
+    }
+    a
+    {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    ul 
+    {
+        display: flex;
+        margin-left: 200px;
+        margin-top: 40px;
+    }
+    ul li
+    {
+        color: white;
+        font-size: 30px;
+        margin-right: 100px;
+        display: block;
+        border-bottom:none;
+    }
+    ul li:hover
+    {
+        color: #EE1111;
+    }
+    label, #toggle
+    {
+        display: none;
+    }
+     main 
+    {
+        display: flex;
+        margin: 0 auto;
+        max-width: 85%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .item 
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px 50px 100px 50px;
+        height: 500px;
+        width: 350px;
+        background-color:#F5F5F5; 
+        border:5px solid;
+        border-color: white;
+        overflow: hidden;     
+    }
+    .item img 
+    {
+        position: absolute;
+        height: 230px;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        margin-top:30px;
+        transition: all 1.0s;
+        transform: scale(1.0);
+    }
+    .item img:hover
+    {
+       transform: scale(1.1);
+    }
+    .title_car
+    {
+        height: 50px;
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+
+    }
+    .price_car
+    {
+        margin-top: 20px;
+        font-size: 25px;
+        font-weight: 800;
+        text-align: center;
+
+    }
+    .more_info
+    {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 25px;
+        font-weight: 600;
+        background-color:#F5F5F5;
+        height: 70px;
+        width: 100%;
+        padding: 20px;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+   footer
+   {
+        position: relative;
+        bottom: 0; 
+        height: auto;
+        width: 100%;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .data
+    {
+        display: flex;
+        color: white;
+        font-size:20px;
+        padding: 20px;
+    }
+    .elements
+    {
+        position: relative;
+        line-height: 40px;
+    }
+    .customer_name,.phone
+    {
+        display: block;
+        margin-bottom: 15px;
+        height: 35px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 30px;
+        color: #EE1111;
+        font-weight: 600;
+    }
+    .customer_name::placeholder, .phone::placeholder
+    {
+        color:#EE1111;
+        font-weight: 600;  
+    }
+    .submit_btn
+    {
+        position: absolute;
+        font-size: 30px;
+        background-color: black;
+        border: none;
+    }
+    .submit_btn:hover
+    {
+        font-size: 40px;
+    }
+
+    .location
+    {
+        
+        text-align: center;
+    }
+    iframe
+    {
+        margin-top: 30px;
+        height: 300px;
+        width:  350px;
+        border-radius: 5px;
+    }
+    .networks
+    {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .networks_element
+    {
+        display: flex;
+        width: 150px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .networks_element i:hover
+    {
+        color: #EE1111;
+        opacity: 0.8;
+    }
+    #text_for_email
+    {
+        display: contents;
+        font-size: 20px;
+    }
+    .input_content
+    {
+        position: absolute;
+        margin-top: 10px;
+    }
+    #email
+    {
+        height: 40px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color: #EE1111;
+        background-color: black;
+    }
+    textarea
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        resize: none;
+        height: 70px;
+        width: 250px;
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color: #EE1111;
+        background-color: black;
+    }
+    #email::placeholder, textarea::placeholder
+    {
+        color:#EE1111;
+    }
+    #submit
+    {
+        margin-top:200px; 
+        height: 50px;
+        width: 140px;
+        color: white;
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        background-color: black;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #submit:hover
+    {
+        background-color: #EE1111;
+    }
+    hr
+    {
+        margin: 0 auto;
+        width: 80%;
+    }
+     .copyright
+     {
+        text-align: center;
+        color: white;
+        font-size:15px;
+        padding: 10px;
+     }
+
+}
+
+/* адаптація під монітори пк*/
+@media only screen and (min-width: 1677px)
+{
+    nav
+    {
+        position: fixed;
+        background-color: black;
+        display: flex;
+        width: 100%;
+    }
+    a
+    {
+        list-style-type: none;
+        text-decoration: none;
+    }
+    ul 
+    {
+        display: flex;
+        margin-left: 350px;
+        margin-top: 40px;
+    }
+    ul li
+    {
+        color: white;
+        font-size: 30px;
+        margin-right: 150px;
+        display: block;
+        border-bottom:none;
+    }
+    ul li:hover
+    {
+        color: #EE1111;
+    } 
+    label, #toggle
+    {
+        display: none;
+    }
+    main 
+    {
+        display: flex;
+        margin: 0 auto;
+        max-width: 85%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .item 
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 150px 50px 100px 50px;
+        height: 500px;
+        width: 350px;
+        background-color:#F5F5F5; 
+        border:5px solid;
+        border-color: white;
+        overflow: hidden;
+        
+    }
+    .item img 
+    {
+        position: absolute;
+        height: 230px;
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        margin-top:30px;
+        transition: all 1.0s;
+        transform: scale(1.0);
+    }
+    .item img:hover
+    {
+       transform: scale(1.1);
+    }
+    footer
+    {
+        position: relative;
+        bottom: 0; 
+        height: auto;
+        width: 100%;
+        background-color: black;
+        margin: 0 auto;
+    }
+    .data
+    {
+        display: flex;
+        color: white;
+        font-size:20px;
+        padding: 20px;
+    }
+    .elements
+    {
+        position: relative;
+        line-height: 40px;
+    }
+    .customer_name,.phone
+    {
+        display: block;
+        margin-bottom: 15px;
+        height: 35px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 30px;
+        color: #EE1111;
+        font-weight: 600;
+    }
+    .customer_name::placeholder, .phone::placeholder
+    {
+        color:#EE1111;
+        font-weight: 600;  
+    }
+    .submit_btn
+    {
+        position: absolute;
+        font-size: 30px;
+        background-color: black;
+        border: none;
+    }
+    .submit_btn:hover
+    {
+        font-size: 40px;
+    }
+
+    .location
+    {
+        
+        text-align: center;
+    }
+    iframe
+    {
+        margin-top: 30px;
+        height: 300px;
+        width:  350px;
+        border-radius: 5px;
+    }
+    .networks
+    {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .networks_element
+    {
+        display: flex;
+        width: 150px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .networks_element i:hover
+    {
+        color: #EE1111;
+        opacity: 0.8;
+    }
+    #text_for_email
+    {
+        display: contents;
+        font-size: 20px;
+    }
+    .input_content
+    {
+        position: absolute;
+        margin-top: 10px;
+    }
+    #email
+    {
+        height: 40px;
+        width: 250px; 
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color: #EE1111;
+        background-color: black;
+    }
+    textarea
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        resize: none;
+        height: 70px;
+        width: 250px;
+        border:1px solid #EE1111; 
+        border-radius: 5px;
+        font-size: 20px;
+        color: #EE1111;
+        background-color: black;
+    }
+    #email::placeholder, textarea::placeholder
+    {
+        color:#EE1111;
+    }
+    #submit
+    {
+        margin-top:200px; 
+        height: 50px;
+        width: 140px;
+        color: white;
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px;
+        background-color: black;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #submit:hover
+    {
+        background-color: #EE1111;
+    }
+    hr
+    {
+        margin: 0 auto;
+        width: 80%;
+    }
+     .copyright
+     {
+        text-align: center;
+        color: white;
+        font-size:15px;
+        padding: 10px;
+     }
+
+}
